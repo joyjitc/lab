@@ -1,0 +1,61 @@
+#include<iostream>
+#include<iomanip>
+int rear=-1,front=-1;
+ class queue
+{
+              int queue1[5];
+      public:
+             
+              void insert(int x)
+               {
+                   if(rear >  4)
+                    {
+                       cout <<"queue over flow";
+                       front=rear=-1;
+                       return;
+                    }
+		    rear++;
+                    queue1[rear]=x;
+               }
+              void delet()
+               {
+                   if(front==rear)
+                     {
+                         cout <<"queue under flow";
+                         return;
+                     }
+		     front++;
+                     cout <<"deleted" <<queue1[front];
+                }
+              void display()
+               {
+                   if(rear==front)
+                     {
+                          cout <<" queue empty";
+                          return;
+                     }
+                   for(int i=front+1;i<=rear;i++)
+                   cout <<queue1[i]<<" ";
+               }
+};
+ 
+void main()
+{
+      int ch;
+      queue qu;
+      while(1)
+        {
+              cout <<"\n1.insert \n 2.delet \n 3.display \n 4.exit\n Enter ur choice";
+              cin >> ch;
+              switch(ch)
+                {
+                  case 1:    cout <<"enter the element";
+                           	 cin >> ch;
+                             qu.insert(ch);
+                             break;
+                  case 2:  qu.delet();  break;
+                  case 3:  qu.display();break;
+                  case 4: exit();
+                  }
+          }
+}

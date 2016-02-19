@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+main()
+{
+	int n,i,j,x,c,a[99999],b[99999],r,k=0,t,l[99999],s=0;
+	cin>>t;
+	while(t--)
+	{
+	cin>>n;
+	a[0]=1;
+	c=1;
+	r=0;
+	for(i=1;i<=n;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			x=a[j]*i+r;
+			a[j]=x%10;
+			r=x/10;
+		}			
+		while(r>0)
+				{
+					a[c]=r%10;
+					r=r/10;
+					c++;
+				}
+	}
+	l[s++]=c;
+	for(i=c-1;i>=0;i--)
+	{
+		b[k++]=a[i];
+	}
+	}
+	j=1;
+	for(;j<s;j++)
+	{
+		l[j]=l[j]+l[j-1];
+		
+	}
+	c=0;
+	for(i=0;i<k;i++)
+	{
+		cout<<b[i];
+		if(i==(l[c])-1)
+		{
+			cout<<endl;
+			c=c+1;
+		}
+	}
+}
+

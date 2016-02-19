@@ -1,0 +1,20 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+void main()
+{
+    int i,rows,k=0;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+    for(i=1;i<=rows;++i)
+    {
+        cout<<setw(rows-i+1);
+        while(k!=2*i-1)
+        {
+           cout << "*";
+           ++k;
+        }
+        k=0;
+        cout << endl;
+    }
+}
