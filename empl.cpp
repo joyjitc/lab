@@ -1,7 +1,8 @@
-#include<iostream>
-#include<fstream>
-#include<stdlib.h>
-#include<string.h>
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <string.h>
+#include <bits/stdc++.h>
 using namespace std;
 class empl{
 	char name[40];
