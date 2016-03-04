@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Node class
@@ -155,37 +156,41 @@ void Tree:: Postorder(Node* Root)
 // Test main program
 int main() {
    Tree* tree = new Tree();
-   tree->addNode("A");
-    tree->addNode("B");
-    tree->addNode("C");
-    tree->addNode("D");
-    tree->addNode("E");
-    tree->addNode("F");
-    tree->addNode("G");
-    tree->addNode("H");
-    tree->addNode("I");
-    tree->addNode("J");
-    tree->addNode("K");
-    tree->addNode("L");
+   char data;
+   int choice;
+   while(1)
+   {
+      cout<<"1> Add Node\n2> Pre order traversal\n3> In order traversal\n4>Post order traversal\n5> Exit\nCHOOSE WISELY::";
+      cin>>choice;
+      switch(choice)
+      {
+        case 1:
+        cout<<"\nEnter data:";
+        cin>>data;
+        tree->addNode(data);
+        break;
+        case 2:
+        cout << "Pre order traversal" << endl;
+        tree->Preorder(tree->Root());
+        cout << endl;
+        break;
+        case 3:
+        cout << "In order traversal" << endl;
+        tree->Inorder(tree->Root());
+        cout << endl;
+        break;
+        case 4:
+        cout << "Post order traversal" << endl;
+        tree->Postorder(tree->Root());
+        cout << endl;
+        break;
+        case 5:
+        exit(0);  
 
-   cout << "Level order traversal" << endl;
-   tree->levelOrder(tree->Root());
-   cout << endl;
 
 
-   cout << "Pre order traversal" << endl;
-   tree->Preorder(tree->Root());
-    cout << endl;
-
-
-   cout << "In order traversal" << endl;
-    tree->Inorder(tree->Root());
-    cout << endl;
-
-   cout << "Post order traversal" << endl;
-    tree->Postorder(tree->Root());
-    cout << endl;
-
+      }
+   }
    delete tree;
    return 0;
 } 
