@@ -14,7 +14,7 @@ void graph::creategraph()
 {
   int u,v;
     //graph *g=new graph;
-  cout<<"enter the edges and vertics\n";
+  cout<<"Enter the number of <edges> & <vertices>";
   cin>>g.e>>g.v;
   adj=new int*[g.v];
 
@@ -30,7 +30,7 @@ void graph::creategraph()
 
   for (int i = 0; i < g.e; ++i)
   {
-    cout<<"enter edge start and end point \n";
+    cout<<"Enter Edge <start> & <end> Point ::";
               cin>>u>>v;
               adj[u][v]=1;
               //adj[v][u]=1;        //for undirected graphs

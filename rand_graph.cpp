@@ -16,7 +16,7 @@ void graph::creategraph()
 {
   int u,v;
     //graph *g=new graph;
-  cout<<"enter the no. of vertics\n";
+  cout<<"Enter the no. of vertices::";
   cin>>g.v;
   adj=new int*[g.v];
 
@@ -56,7 +56,14 @@ void graph::creategraph()
 
 int main()
 {
-  g.creategraph();
+  bool choice=1; 
+  while(choice==1)
+  {
+     g.creategraph();
+     cout<<"Do you want to continue?\n1 for Yes, 0 for No\nChoose Wisely!!\n";
+     cin>>choice;
+  }
+ 
   return 0;
 }
 

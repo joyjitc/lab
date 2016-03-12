@@ -25,7 +25,7 @@ void lcount(class tree*cur)
     ++c;
 
   }
-  cout<<"leftchild:"<<c-1;
+  cout<<"leftchild :"<<c-1;
 }
 void rcount(class tree*cur)
 {
@@ -36,7 +36,7 @@ void rcount(class tree*cur)
     ++c;
 
   }
-  cout<<"  Rightchild:"<<c-1<<endl;
+  cout<<"  Rightchild :"<<c-1<<endl;
 
 }
 
@@ -46,7 +46,7 @@ void inorder(class tree *sr)
     {
         inorder(sr->leftchild);
 
-        cout<<sr->data<<" --->";
+        cout<<sr->data<<" --->  ";
         lcount(sr);
         rcount(sr);
         inorder(sr->rightchild);
@@ -85,12 +85,12 @@ int main()
     int req,i=1,num;
     bt=NULL;
 
-    cout<<"no. of data\n";
+    cout<<"Enter the number of Nodes ::";
     cin>>req;
 
     while(i++<=req)
     {
-        cout<<"enter data\n";
+        cout<<"Input Data ::";
         cin>>num;
         insert(&bt,num);
     }
