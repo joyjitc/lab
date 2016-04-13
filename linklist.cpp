@@ -2,11 +2,11 @@
 #include<stdlib.h>
 
 using namespace std;
-
+template <typename T>
 class node 
 {       
         public:
-                int data;
+                T data;
                 node *link;
                 node()
                 {
@@ -17,6 +17,7 @@ class node
 
 
 };
+template <typename T>
 class linked
 {
         public:
@@ -24,13 +25,13 @@ class linked
                 node *ptr;
                 node *temp=NULL;
 
-                void add_beg(int item){
+                void add_beg(T item){
                     ptr = new node();
                     ptr->data=item;
                     ptr->link=start;
                     start=ptr;
                 };
-                void add_end(int item){
+                void add_end(T item){
                     ptr = new node();
                     ptr->data=item;
                     if(start==NULL)

@@ -1,64 +1,66 @@
  #include <bits/stdc++.h>
  using namespace std;
- class comp  
- {  
-  public:  
-  int i,r;  
-  
-  void read()  
-  {  
-  cout<<"\nEnter Real Part:";  
-  cin>>r;  
-  cout<<"Enter Imaginary Part:";  
-  cin>>i;  
-  }  
+ class matrix
+ {
+ public:
+ 	int mat[3][3];
+ 	void input()  
+  	{  
+  		int i,j;
+  		cout<<"\nEnter the values for ::\n";
+
+  		for(i=0;i<3;i++)
+  		{
+  			for(j=0;j<3;j++)
+  			{
+  				printf("Matrix[%d][%d]:",i,j);
+  				cin>>mat[i][j];
+  			}
+  		}  		
+  	}  
   void display()  
   { 
-  if(i>=0) 
-  cout<<"\n= "<<r<<"+"<<i<<"i"; 
-  else
-  	 cout<<"\n= "<<r<<"-"<<-i<<"i"; 
+  cout<<"\nEntered matrix is ::\n";
+  		int i,j;
+  		for(i=0;i<3;i++)
+  		{
+
+
+  			for(j=0;j<3;j++)
+  			{
+  				cout<<mat[i][j]<<" ";
+  			}
+  			cout<<"\n";
+  		}  		
 
   }  
-  comp operator+(comp a2)  
-  {  
-  //comp a;  
-  //a.r=r+a2.r;  
-  //a.i=i+a2.i;  
-  //return a;
-  r=r+a2.r;
-  i=i+a2.i;
-  return *this;  
-  }  
-  comp operator-(comp a2)  
-  {  
-  comp a;  
-  a.r=r-a2.r;  
-  a.i=i-a2.i;  
-  return a;  
-  }  
-  comp operator*(comp a2)  
-  {  
-  comp a;  
-  a.r=(r*a2.r)-(i*a2.i);  
-  a.i=(r*a2.i)+(i*a2.r);  
-  return a;  
-  }  
-  comp operator/(comp a2)  
-  {  
-  comp a;  
-  a.r=((r*a2.r)+(i*a2.i))/((a2.r*a2.r)+(a2.i*a2.i));  
-  a.i=((i*a2.r)-(r*a2.i))/((a2.r*a2.r)+(a2.i*a2.i));  
-  return a;  
-  }  
-  comp operator!() 
-  {  
-  comp a;  
-  a.r=r;  
-  a.i=-i; 
-  return a;  
-  }  
- };  
+  matrix operator+(matrix a)
+  {
+  	matrix c;
+  	int i,j;
+  	for(i=0;i<3;i++)
+  	{
+  		for(j=0;j<3;j++)
+  		{
+  			c.mat[i][j]=matrix[i][j]+a.matrix[i][j];
+  		}			
+  	}  
+   return c;  
+  } 
+  matrix operator-(matrix a)
+  {
+  	matrix c;
+  	int i,j;
+  	for(i=0;i<3;i++)
+  	{
+  		for(j=0;j<3;j++)
+  		{
+  			c.mat[i][j]=matrix[i][j]-a.matrix[i][j];
+  		}			
+  	}  
+   return c;  
+  } 
+ }
  int main()  
  {  
  int ch;  
@@ -68,8 +70,7 @@
  do  
  {  
   cout<<"\n1.Addition \n2.Subtraction";  
-  cout<<"\n3.Multiplication \n4.Division ";  
-  cout<<"\n5.Modulus \n6.Conjugate \n7.Exit";  
+  cout<<"\n3.Exit";  
   cout<<"\nEnter the choice :";  
   cin>>ch;  
   switch(ch)  
@@ -133,6 +134,6 @@
        break;  
 
   }  
-  }while(ch!=7);  
+  }while(ch!=3);  
   return 0;
  }  
