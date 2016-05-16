@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+	hello;
+	how are you;
+	int
+	{
+		cap;
+		whatsip;
+	}
+}
+
+¤š
