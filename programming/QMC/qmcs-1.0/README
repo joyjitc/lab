@@ -1,0 +1,13 @@
+This program uses the Quine McCluskey method to simplify
+boolean functions. I created this program to simplify my
+circuit logic for my Digital Logic Class, therefore the
+actual code is not very well written. If you find any bugs
+please report them to me - stefan (at) cooper (dot) edu.
+
+This program was compiled on a mac - OSX Tiger.
+
+to compile using g++, simply:
+g++ qmcs.cc -o qmcs
+
+to use the program without having to be in the same directory
+copy the compiled binary to a folder in your PATH (e.g. /usr/bin)

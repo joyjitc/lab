@@ -1,0 +1,5 @@
+-convert command line argument routines to standard GNU
+argp.
+-code the last step of the algorithm - the don't cares.
+-fix up the code to only use one subroutine to create tables.
+-very likely will port this to C.
