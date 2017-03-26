@@ -218,7 +218,7 @@ void reverse()//By Arijit Chatterjee
 		prev=pre;
 		pre=after;
 	}
-	head=prev;`
+	head=prev;
 }
 
 /*
